@@ -1,0 +1,24 @@
+.icon:after{
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+}
+
+.fb-icon:after {
+    color: rgb(66, 103, 178);
+    content: "\f082";
+}
+
+.google-icon:after {
+    color: rgb(222, 81, 69);
+    content: "\f1a0";
+}
+
+.telegram-icon:after {
+    color: rgb(30, 148, 208);
+    content: "\f2c6";
+}
+
+.insta-icon:after {
+    color: rgb(247, 131, 58);
+    content: "\f16d";
+}
