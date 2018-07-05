@@ -88,14 +88,14 @@
 
 .tag {
     cursor: pointer;
-    background: rgba(18, 160, 220, 0.2);
+    background: rgba(108, 160, 209, 0.4);
     border-radius: 5px;
 }
 
 .tag-container .tag {
     margin: 3px;
     padding: 5px;
-    border: 1px solid rgb(18, 160, 220);
+    border: 1px solid rgb(80, 129, 175);
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     color: #555656;
@@ -103,7 +103,7 @@
 }
 
 .tag-container .tag:hover {
-    background: rgba(18, 160, 220, 0.5);
+    background: rgba(108, 160, 209, 0.9);
     color: white;
     transition: 300ms;
 }

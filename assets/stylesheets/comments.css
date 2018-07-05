@@ -48,11 +48,11 @@
 }
 
 .comment:hover {
-    background: rgba(18, 160, 220, 0.5);
+    background: #6ca0d1;
     transition: 300ms;
 }
 
 .comment:hover * {
-    color: white;
+    color: #f2f2f2;
     transition: 300ms;
 }
