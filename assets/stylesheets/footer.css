@@ -2,6 +2,7 @@ footer {
     display: flex;
     justify-content: space-between;
     height: 20px;
+    bottom: 100%;
 }
 
 footer > .logo {
