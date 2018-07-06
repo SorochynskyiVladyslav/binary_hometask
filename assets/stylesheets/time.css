@@ -1,0 +1,64 @@
+.time-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.day {
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.time-container > .header {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: none;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgba(144,175,197, 0.5);
+    width: 100%;
+}
+
+.time-container > .header:hover {
+    background-color: var(--stone);
+    color: var(--white);
+}
+
+.time-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 2rem 2rem;
+    grid-template-columns: repeat(12, minmax(3rem, 5rem));
+    width: 100%;
+}
+
+.time-grid.active {
+    height: auto;
+    width: 100%;
+}
+
+.time {
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    height: 100%;
+    background-color: rgba(255, 98, 98, 0.5);
+    transition: 0.5s;
+}
+
+.time:hover {
+    background-color: rgba(255, 98, 98, 0.8);
+}
+
+.time.active {
+    background-color: rgba(99, 255, 148, 0.5);
+}
+
+.time.active:hover {
+    background-color: rgba(99, 255, 148, 0.8);
+}

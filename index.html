@@ -2,211 +2,90 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Заметки дайвера</title>
+        <title>St Raphael Hospital</title>
+        <link rel="icon" href="./assets/images/logo.jpg">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Raleway" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/stylesheets/basic.css">
-        <link rel="stylesheet" href="./assets/stylesheets/icons.css">
-        <link rel="stylesheet" href="./assets/stylesheets/header.css">
+        <link rel="stylesheet" href="./assets/stylesheets/navigation.css">
         <link rel="stylesheet" href="./assets/stylesheets/midsection.css">
-        <link rel="stylesheet" href="./assets/stylesheets/card.css">
-        <link rel="stylesheet" href="./assets/stylesheets/comments.css">
-        <link rel="stylesheet" href="./assets/stylesheets/footer.css">
-        <link rel="stylesheet" href="./assets/stylesheets/smallscr.css">
+        <link rel="stylesheet" href="./assets/stylesheets/time.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./scripts/main.js"></script>
     </head>
     <body>
-        <div id="side-menu" class="side-nav">
-            <a href="#"><button class="btn nav-btn">Главная</button></a>
-            <a href="#"><button class="btn nav-btn">Рейтинг записей</button></a>
-            <a href="#"><button class="btn nav-btn">Создать блог</button></a>
-            <a href="#"><button class="btn nav-btn">Профиль</button></a>
-            <a href="#"><button class="btn nav-btn">Теги</button></a>
-            <a href="#"><button class="btn nav-btn">Войти</button></a>    
-        </div>
-        <header class="header-container">
+        <div class="header-wrp">
             <div class="hamburger-menu" onclick="toggle_menu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-            <img class="logo" src="./assets/images/logo.png">
-            <div class="top-right-section-wrp">
-                <div class="social">
-                    <a href="https://www.facebook.com/"><i class="icon fb-icon"></i></a>
-                    <a href="https://plus.google.com/"><i class="icon google-icon"></i></a>
-                    <a href="https://telegram.org/"><i class="icon telegram-icon"></i></a>
-                    <a href="https://www.instagram.com/?hl=en"><i class="icon insta-icon"></i></a>
-                </div>
-                <form class="search-form">
-                    <input type="text" placeholder="Поиск" required>
-                    <button class="btn btn-search" type="submit"></button>
-                </form>
+            <div class="top-menu">
+                <a href="#"><button class="btn nav-btn">Main Page</button></a>
+                <a href="#"><button class="btn nav-btn">Accounting</button></a>
+                <a href="#"><button class="btn nav-btn">Contact</button></a>
             </div>
-            <div class="nav-bar">
-                <a href="#"><button class="btn nav-btn">Главная</button></a>
-                <a href="#"><button class="btn nav-btn">Рейтинг записей</button></a>
-                <a href="#"><button class="btn nav-btn">Создать блог</button></a>
-                <a href="#"><button class="btn nav-btn">Профиль</button></a>
-                <a href="#"><button class="btn nav-btn">Теги</button></a>
-                <a href="#"><button class="btn nav-btn">Войти</button></a>
+            <h3 class="header">St Raphael Hospital</h3>
+            <div class="top-menu">
+                    <a href="#"><button class="btn nav-btn">My Patiens</button></a>
+                    <a href="#"><button class="btn nav-btn">My Services</button></a>
+                    <a href="#"><button class="btn nav-btn">My Profile</button></a>
+                    <a href="#"><button class="btn nav-btn">Sign Out</button></a>
             </div>
-        </header>
-        <div class="midsection-container">
-            <main class="main-container">
-                <div class="card">
-                    <div class="card-img-wrp"><img class="card-img" src="./assets/images/image1.jpg"></div>
-                    <h3 class="card-title">Hermissenda crassicornis</h3>
-                    <p class="card-text">Погода в общем то не очень. Холодрыга и сурово... Ночью был сильный дождь. Весь день сильный ветер, на море сильный накат. Поэтому в деле архив 2017 года.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> 5 минут назад</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 5</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 6</span>
-                    </div>
-                </div>
-                <div class="card">
-                        <div class="card-img-wrp"><img class="card-img" src="./assets/images/image2.jpg"></div>
-                    <h3 class="card-title">Amforina odhneri</h3>
-                    <p class="card-text">Сегодня был 17 день непрерывной нырялки в июне-июле. А сейчас у нас идет дождь и ждем первый тайфун этого года. Добро пожаловать. Усть реки Рудной замыто совершенно - на баре не более 20 см, катер даже пустой не проходит.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> 2 часа назад</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 8</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 3</span>
-                    </div>
-                </div>
-                <div class="card">
-                        <div class="card-img-wrp"><img class="card-img" src="./assets/images/image3.jpg"></div>
-                    <h3 class="card-title">Lebbeus brandti на асцидии</h3>
-                    <p class="card-text">Сегодня немного красного тона в публикации. Наслаждайтесь фоточками - только из моря.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> вчера</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 7</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 5</span>
-                    </div>
-                </div>
-                <div class="card">
-                        <div class="card-img-wrp"><img class="card-img" src="./assets/images/image4.jpg"></div>
-                    <h3 class="card-title">Caloria indica</h3>
-                    <p class="card-text">Сегодня несколько фоточек из Анилао, из моей ноябрьской поездки 2017 года.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> 22.05.18</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 4</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 1</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrp"><img class="card-img" src="./assets/images/image5.jpg"></div>
-                    <h3 class="card-title">Ceberilla mosslandica</h3>
-                    <p class="card-text">Сегодня встретил во время учебного погружения. Это второе пришествие этого нудика в наши воды, первое было в 2008 году в заливе Петра Великого.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> 16.05.18</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 8</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 2</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrp"><img class="card-img" src="./assets/images/image6.jpg"></div>
-                    <h3 class="card-title">Гребневик Bolenopsis</h3>
-                    <p class="card-text">Вчера, как и позавера ныряли. Немного фотографировал. Смотрим и оцениваем, кому и что нравится.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> 14.05.18</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 8</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 2</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrp"><img class="card-img" src="./assets/images/image7.jpg"></div>
-                    <h3 class="card-title">Агономал хоботный</h3>
-                    <p class="card-text">Ныряли. Мой дружбан Дима Рудась приехал сюда с мечтой снять агономала и рыбу-лягушку. Сегодня умчался во Владивосток- дела, но все его мечты осуществились, чему я немного поспособствовал. Рад, что удалось.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> 10.05.18</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 4</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 1</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrp"><img class="card-img" src="./assets/images/image8.jpg"></div>
-                    <h3 class="card-title">Cyanea capillata</h3>
-                    <p class="card-text">Сегодня мы ныряли. Холодно. Вода поверхность +8, на 23 м уже +4. Крабы на месте. Но тем не менее сегодня фоточки из архива.</p>
-                    <div class="card-footer">
-                        <span class="card-time"><i class="far fa-clock"></i> 30.04.18</span>
-                        <span class="card-rating"><i class="far fa-star"></i> 5</span>
-                        <span class="card-comments"><i class="fas fa-comments"></i> 6</span>
-                    </div>
-                </div>
-            </main>
-            <aside class="aside-container">
-                <div class="author">
-                    <h3 class="author-name">Андрей Шаптак</h3>
-                    <img class="avatar" src="./assets/images/avatar.jpg">
-                    <p class="author-info">Живу на берегу бухты Рудной Японского моря, в местечке под названием Смычка, где погружаюсь уже 40 лет.</p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/"><i class="icon fb-icon"></i></a>
-                        <a href="https://plus.google.com/"><i class="icon google-icon"></i></a>
-                        <a href="https://telegram.org/"><i class="icon telegram-icon"></i></a>
-                        <a href="https://www.instagram.com/?hl=en"><i class="icon insta-icon"></i></a>
-                    </div>
-                </div>
-                <form class="subscride-form">
-                    <input type="text" placeholder="Имя" required>
-                    <input type="email" placeholder="e-mail" required>
-                    <button class="btn btn-subscride" type="submit">Подписаться</button>
-                </form>    
-                <form class="search-form">
-                    <input type="text" placeholder="Поиск" required>
-                    <button class="btn btn-search" type="submit"></button>
-                </form>
-                <div class="tags">
-                    <h3 class="header">Tags</h3>
-                    <div class="tag-container">
-                        <a href="#"><div class="tag"><span>Смычка</span></div></a>
-                        <a href="#"><div class="tag"><span>архив</span></div></a>
-                        <a href="#"><div class="tag"><span>anilao</span></div></a>
-                        <a href="#"><div class="tag"><span>медузы</span></div></a>
-                        <a href="#"><div class="tag"><span>rudnaya bay</span></div></a>
-                        <a href="#"><div class="tag"><span>дайвинг на севере Приморья</span></div></a>
-                        <a href="#"><div class="tag"><span>осминог</span></div></a>
-                        <a href="#"><div class="tag"><span>briner cape</span></div></a>
-                        <a href="#"><div class="tag"><span>crab</span></div></a>
-                        <a href="#"><div class="tag"><span>philippines</span></div></a>
-                        <a href="#"><div class="tag"><span>Владивосток</span></div></a>
-                        <a href="#"><div class="tag"><span>shark</span></div></a>
-                        <a href="#"><div class="tag"><span>бухта Рудная</span></div></a>
-                        <a href="#"><div class="tag"><span>Куба</span></div></a>
-                    </div>
-                </div>  
-                <div class="comments">
-                    <h3 class="header">Последние комментарии</h3>
-                    <div class="comments-container">
-                        <div class="comment">
-                            <img class="avatar" src="./assets/images/avatar1.png">
-                            <p class="comment-author">skifenok</p>
-                            <p class="comment-text">ах, какая медуза сказочная!</p>
-                        </div>
-                        <div class="comment">
-                            <img class="avatar" src="./assets/images/avatar2.png">
-                            <p class="comment-author">hunting_kitten</p>
-                            <p class="comment-text">Вах, оранжевый головастик))</p>
-                        </div>
-                        <div class="comment">
-                            <img class="avatar" src="./assets/images/avatar3.png">
-                            <p class="comment-author">nut_g</p>
-                            <p class="comment-text">Интересно, возможно ли занос их с балластными водами? Ну или просто на обрастаниях судов приехали.</p>
-                        </div>
-                    </div>
-                </div>
-            </aside>
         </div>
-        <footer>
-            <img class="logo" src="./assets/images/logo2.png">
-            <span class="copyright">&#169; Binary Academy 2018</span>
-        </footer>
-        
+        <div id="side-menu" class="side-nav">
+            <a href="#"><button class="btn nav-btn">Main Page</button></a>
+            <a href="#"><button class="btn nav-btn">Accounting</button></a>
+            <a href="#"><button class="btn nav-btn">Contact</button></a>
+            <button class="empty btn nav-btn"></button>
+            <a href="#"><button class="btn nav-btn">My Patiens</button></a>
+            <a href="#"><button class="btn nav-btn">My Services</button></a>
+            <a href="#"><button class="btn nav-btn">My Profile</button></a>
+            <button class="empty btn nav-btn"></button>
+            <a href="#"><button class="btn nav-btn">Sign Out</button></a>
+            <div class="empty"></div>    
+        </div>
+        <main class="main-container">
+            <div class="section-container">
+                <h3 class="header"><i class="far fa-id-card"></i> My profile</h3>
+                <div class="profile-container">
+                    <img class="profile-photo" src="./assets/images/avatar.png">
+                    <div class="profile-info">
+                        <div class="section">
+                            <h4 class="profile-header">Name</h4>
+                            <p class="profile-text">Jane Smith</p>
+                        </div>
+                        <div class="section">
+                            <h4 class="profile-header">Position</h4>
+                            <p class="profile-text">Doctor (Cardiology)</p>
+                        </div>
+                        <div class="section">
+                            <h4 class="profile-header">Mobile</h4>
+                            <p class="profile-text">+380509825333</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-container">
+                <h3 class="header"><i class="far fa-clock"></i> My working hours <i class="tip-icon far fa-question-circle"></i></h3>
+                <div class="tip"><span> Press CTRL and move mouse over hours or click to mark your availability </span></div>
+                <div class="time-container">
+                    <h3 class="header day-header">Monday</h3>
+                    <div class="day mon"></div>
+                    <h3 class="header day-header">Tuesday</h3>
+                    <div class="day tue"></div>
+                    <h3 class="header day-header">Wednesday</h3>
+                    <div class="day wed"></div>
+                    <h3 class="header day-header">Thursday</h3>
+                    <div class="day thu"></div>
+                    <h3 class="header day-header">Friday</h3>
+                    <div class="day fri"></div>
+                    <h3 class="header day-header">Saturday</h3>
+                    <div class="day sat"></div>
+                    <h3 class="header day-header">Sunday</h3>
+                    <div class="day sun"></div>
+                </div>
+            </div>
+        </main>
     </body>
-    <script>
-        function toggle_menu(icon){
-            icon.classList.toggle("change");
-            document.getElementById("side-menu").classList.toggle("active");
-
-        }
-    </script>
-
 </html>

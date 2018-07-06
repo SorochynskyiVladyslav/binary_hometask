@@ -1,0 +1,128 @@
+.header-wrp {
+    top: 0px;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgba(144,175,197, 0.5);
+    box-shadow: 0 0 5px var(--mist);
+    position: sticky;
+    z-index: 2;
+}
+
+.header-wrp > .header {
+    text-transform: none;
+    font-size: 24px;
+    color: var(--stone);
+    margin: 10px;
+}
+
+.hamburger-menu {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: var(--stone);
+    margin: 5px 0;
+    transition: 0.5s;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.side-nav {
+    padding-top: 50px;
+    position: fixed;
+    background-color: rgba(144,175,197, 0);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    align-content: flex-start;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    margin: 0;
+    transition: 0.5s;
+    box-shadow: 2px 50px 5px var(--mist);
+}
+
+.side-nav.active {
+    width: 60%;
+    height: 100%;
+}
+
+.side-nav .empty {
+    height: 100%;
+    width: 100%;
+    background-color: var(--mist);
+}
+
+.empty.nav-btn {
+    height: 100px;
+    cursor: default;
+}
+
+.side-nav .btn.nav-btn {
+    width: 100%;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.side-nav .btn {
+    border-bottom: 1px solid var(--stone);
+}
+
+.side-nav a:first-child .btn {
+    border-top: 1px solid var(--stone);
+}
+
+.top-menu {
+    display:none;
+}
+
+@media only screen and (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .header-wrp {
+        height: auto;
+    }
+    .top-menu {
+        display: flex;
+        align-content: center;
+        height: 100%;
+
+    }
+    .btn.nav-btn {
+        height: auto;
+        background-color: rgba(144,175,197, 0);
+        text-transform: none;
+    }
+
+    .btn.nav-btn:hover {
+        background-color: var(--stone);
+        color: var(--white);
+    }
+
+    .header-wrp > .header {
+        margin: 0 10px;
+        font-size: 1.3em;
+        align-self: center;
+    }
+}
