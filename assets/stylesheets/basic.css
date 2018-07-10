@@ -1,0 +1,58 @@
+:root {
+    --puce: rgb(74,35,34);
+    --dusty-rose: rgb(146,68,58);
+    --tangerine: rgb(249,160,36);
+    --freesia: rgb(251,208,68);
+    --white: rgb(232, 234, 237);
+    --black: rgb(56, 59, 61);
+    --red: rgb(255, 98, 98);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+.btn,
+input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+input,
+.btn {
+    outline: none;
+    padding: 0.4rem;
+}
+
+.header {
+    display: block;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-family: 'Crimson Text', serif;
+}
+
+.btn {
+    background-color: rgba(249,160,36, 0.5);
+    border: 0;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 300px;
+}
+
+.btn:hover {
+    background-color: rgba(249,160,36, 1);
+    box-shadow: 3px 3px 2px 0 rgba(249,160,36, 0.5);
+}
