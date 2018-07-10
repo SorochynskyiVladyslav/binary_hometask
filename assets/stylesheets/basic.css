@@ -1,11 +1,10 @@
 :root {
-    --mist: rgb(144,175,197);
-    --stone: rgb(51,107,135);
-    --shadow: rgb(42,49,50);
-    --autumn-foliage:rgb(115,102,38);
+    --puce: rgb(74,35,34);
+    --dusty-rose: rgb(146,68,58);
+    --tangerine: rgb(249,160,36);
+    --freesia: rgb(251,208,68);
     --white: rgb(232, 234, 237);
     --black: rgb(56, 59, 61);
-    --green: rgb(99, 255, 148);
     --red: rgb(255, 98, 98);
 }
 
@@ -15,7 +14,6 @@
 
 body {
     margin: 0;
-    min-height: 100vh;
 }
 
 a {
@@ -23,38 +21,38 @@ a {
 }
 
 html,
-.btn {
+.btn,
+input {
     font-family: 'Raleway', sans-serif;
-    color: var(--shadow);
     font-size: 14px;
     line-height: 1.5;
     color: var(--black);
 }
 
+input,
 .btn {
-    cursor: pointer;
-    background-color: var(--mist);
-    border: 0;
-    min-height: 40px;
-    max-height: 60px;
-    padding: 10px;
-    transition: 0.4s;
-}
-
-.nav-btn {
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-
-.nav-btn:hover {
-    background-color: var(--stone);
-    color: var(--white);
+    outline: none;
+    padding: 0.4rem;
 }
 
 .header {
     display: block;
     font-size: 1.3rem;
-    margin: 15px;
+    margin: 0;
+    padding: 0.5rem;
     text-transform: uppercase;
     font-family: 'Crimson Text', serif;
+}
+
+.btn {
+    background-color: rgba(249,160,36, 0.5);
+    border: 0;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 300px;
+}
+
+.btn:hover {
+    background-color: rgba(249,160,36, 1);
+    box-shadow: 3px 3px 2px 0 rgba(249,160,36, 0.5);
 }
