@@ -211,6 +211,19 @@ function generate_post(post){
 
     let delete_button = document.createElement('button');
     delete_button.classList.add('btn', 'btn-delete');
+    delete_button.addEventListener("click", (event)=>{
+            
+        let title_to_delete = event.currentTarget.previousSibling.innerText;
+        let node_to_delete = event.currentTarget.previousSibling.parentElement.parentElement;
+        let parent = node_to_delete.parentElement;
+
+        for (let i=0; i<parent.childNodes.length; i++) {
+            if (parent.childNodes[i] == node_to_delete) {
+                parent.removeChild(node_to_delete);
+                break;
+            }
+        }
+    })
 
     let delete_icon = document.createElement('i');
     delete_icon.classList.add('fas', 'fa-times');
