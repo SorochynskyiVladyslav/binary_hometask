@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/index.js"></script>
+</head>
+
+<body>
+
+<div class="form-wrp" id="join-form-wrp">
+    <form class="ui form" id="join-form">
+        <div class="field">
+            <label>Name</label>
+            <input id="name-input" type="text" name="name" placeholder="Name" required>
+        </div>
+        <div class="field">
+            <label>Username</label>
+            <input id="username-input" type="text" name="username" placeholder="Username" required>
+        </div>
+        <button id="join-btn" class="ui button" type="submit">Join Chat</button>
+        <div id="error-msg" class="ui error message"></div>
+    </form>
+</div>
+
+<div id="chat" class="chat">
+    <div class="left">
+        <div id="users" class="users">
+
+        </div>
+        <button id="leave-btn" class="ui red button">Leave</button>
+    </div>
+    <div class="right">
+        <div id="chat-history" class="chat-history">
+
+        </div>
+        <form id="message-form" class="ui-form">
+            <div class="inline fields">
+                <div class="ui input"><input id="message-input" type="text" required></div>
+                <button type="submit" class="ui green button">Send</button>
+            </div>
+        </form>
+    </div>
+    <div id="typing" class="ui message"></div>
+</div>
+
+</body>
+
+</html>

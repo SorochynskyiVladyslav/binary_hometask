@@ -1,0 +1,109 @@
+* {
+    box-sizing: content-box;
+}
+
+
+.form-wrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-wrp a {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.chat {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto;
+    padding-bottom: 5px;
+}
+
+.left {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 100vh;
+}
+
+.users {
+    padding: 10px;
+    margin: 0;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.users > .user {
+    border-radius: 15px;
+    background-color: rgba(195, 197, 201, 0.2);
+}
+
+.user {
+    padding: 5px;
+    margin: 5px;
+}
+
+.username:before {
+    content: '@';
+}
+
+.user > p {
+    margin: 0;
+}
+
+.chat-history {
+    margin: 0;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    overflow-y: scroll;
+}
+
+.chat-history > .ui.message {
+    max-width: 50%;
+    padding: 5px;
+    margin: 5px;
+    width: max-content;
+    min-height: 30px;
+    height: auto;
+}
+
+.chat-history > .ui.message.right {
+    align-self: flex-end;
+}
+
+.ui.message > .user {
+    margin: 10px;
+}
+
+.right {
+    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    max-height: 100vh;
+}
+
+#message-form {
+    width: 100%;
+}
+
+#message-form > .inline.fields > .ui.input {
+    width: calc(100% - 80px);
+}
