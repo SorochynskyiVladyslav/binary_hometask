@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
+    "build": "webpack",
     "start": "npm run server:dev",
     "server:dev": "webpack-dev-server"
   },
