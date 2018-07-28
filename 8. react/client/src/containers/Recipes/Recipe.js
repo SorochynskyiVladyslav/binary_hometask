@@ -8,10 +8,6 @@ import { activeRecipe, isRecipesFetching } from './RecipesReducer';
 
 class Recipe extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.actions.getRecipeById(this.props.match.params.id);
     }

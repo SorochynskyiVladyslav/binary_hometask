@@ -6,7 +6,7 @@ import { Container } from 'semantic-ui-react';
 import { addRecipe } from './RecipesActions';
 import { isRecipesFetching } from './RecipesReducer';
 import AddForm from '../../components/AddForm';
-
+import './Recipe.css';
 
 class RecipesAdd extends React.Component {
     constructor(props){

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Form, Button, Input} from 'semantic-ui-react';
+import {Form, Button, Input, Container} from 'semantic-ui-react';
+
 
 export default class AddForm extends React.Component {
 
@@ -33,7 +34,7 @@ export default class AddForm extends React.Component {
 
     render () {
         const value = this.state;
-        return <Form
+        return <Container><Form
             onSubmit={event => this.handleSubmit(event, value)}>
             <Form.Field
                 control={Input}
@@ -44,8 +45,7 @@ export default class AddForm extends React.Component {
                 required
                 onChange={this.handleChange.bind(this)}
             />
-            <Form.Field
-                control={Input}
+            <Form.TextArea
                 label='Description'
                 placeholder='Recipe Description'
                 type='text'
@@ -73,6 +73,6 @@ export default class AddForm extends React.Component {
                 color='green'
                 position='right'>
                 Add Recipe</Button>
-        </Form>;
+        </Form></Container>;
     }
 }

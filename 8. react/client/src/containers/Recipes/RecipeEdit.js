@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Button, Loader, Dimmer, Form, Input } from 'semantic-ui-react';
+import { Button, Loader, Dimmer, Form, Input, Container } from 'semantic-ui-react';
 import { getRecipeById, editRecipe } from './RecipesActions';
 import { activeRecipe, isRecipesFetching } from './RecipesReducer';
 
@@ -54,7 +54,7 @@ class RecipeEdit extends React.Component {
         else {
             value = this.state;
         }
-        return <Form
+        return <Container><Form
             onSubmit={event => this.handleSubmit(event, value)}>
             <Dimmer active={isFetching}><Loader />
             </Dimmer>
@@ -68,8 +68,7 @@ class RecipeEdit extends React.Component {
                 required
                 onChange={this.handleChange.bind(this)}
             />
-            <Form.Field
-                control={Input}
+            <Form.TextArea
                 label='Description'
                 placeholder='Recipe Description'
                 type='text'
@@ -99,7 +98,7 @@ class RecipeEdit extends React.Component {
                 color='green'
                 position='right'>
                 Save</Button></React.Fragment>}
-        </Form>;
+        </Form></Container>;
     }
 }
 

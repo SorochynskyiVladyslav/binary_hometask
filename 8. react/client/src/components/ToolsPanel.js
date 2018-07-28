@@ -3,8 +3,12 @@ import {Menu, Icon, Input} from 'semantic-ui-react';
 
 export default class ToolsPanel extends React.Component {
 
-    handleChange(event){
+    handleChange(event) {
         this.props.onSearch(event.target.value);
+    }
+
+    handleSort(sortType) {
+        this.props.onSort(sortType);
     }
 
     render() {
@@ -13,11 +17,12 @@ export default class ToolsPanel extends React.Component {
                 <Icon name='add'/>
                 Add Recipe
             </Menu.Item>
-            <Menu.Item onClick={this.props.onSort(true)}>
-                Sort by rating:
+            <Menu.Item onClick={() => this.handleSort('rating down')}>
+                Top rating first:
                 <Icon name='sort amount down'/>
             </Menu.Item>
-            <Menu.Item onClick={this.props.onSort(false)}>
+            <Menu.Item onClick={() => this.handleSort('rating up')}>
+                Top rating last:
                 <Icon name='sort amount up'/>
             </Menu.Item>
             <Menu.Menu position='right'>
